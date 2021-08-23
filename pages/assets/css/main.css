@@ -1,0 +1,176 @@
+body{
+    background-color: #191b43;
+}
+
+body::-webkit-scrollbar {
+    width: 0.4em;
+}
+
+body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #00bf9b;
+    outline: 1px solid slategrey;
+}
+
+.main-panel{
+    background: #191b43;
+    border-top: 3px solid #00bf9b;
+}
+
+.sidebar, .off-canvas-sidebar{
+    background: #00bf9b;
+}
+
+.btn-primary{
+    background: #00bf9b;
+    background-color: #00bf9b;
+}
+
+.btn-primary:disabled{
+    background: #191b43;
+    background-color: #191b43;
+}
+.card{
+    background: #48426d;
+}
+
+#clg-form .form-control{
+    color: #00bf9b;
+}
+
+.sidebar p{
+    color: #ffffff;
+    font-size: 0.89rem;
+}
+
+.fm-control-sbmt {
+    width: 55%;
+}
+
+/* .form-control {
+    text-align: center;
+} */
+
+.form-control:focus {
+    border-color: #00bf9b;
+    background-color: #48426d;
+    box-shadow: none;
+}
+
+.btn-primary:hover, .btn-primary:focus,
+.btn-primary:active, .btn-primary.active,
+.btn-primary:active:focus, .btn-primary:active:hover,
+.btn-primary.active:focus, .btn-primary.active:hover{
+    background-color: #00bf9b!important;
+    background-image: none!important;
+}
+
+select{
+    text-align: justify; /* For Edge */
+    text-align-last: center;
+}
+
+.footer {
+    padding: 22px 0 24px 250px;
+}
+
+a, a:hover, a:focus {
+    color: #00bf9b;
+    font-weight: 400;
+}
+
+.navbar a.navbar-brand{
+    color: #ffffff;
+}
+
+
+
+.img-content{
+    text-align: center;
+}
+
+.dl-btn{
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+#dl-img, #dl-img:hover, #dl-img:hover{
+    color: #fff;
+    text-decoration: none;
+}
+
+#username-info{
+    display: inline-block;
+    max-width: 40%;
+    margin-right: 20px
+}
+
+#btn-user{
+    display: inline-block;
+}
+
+.info-holder{
+    text-align: center;
+}
+.user-info{
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.ulabel{
+    text-align: left;
+    margin-top: 10px;
+}
+
+.rounded{
+    border-radius: 50%!important;
+}
+
+.form-control[disabled],
+.form-control[readonly], 
+fieldset[disabled] .form-control{
+    background-color: #191b43;
+    color: #fff;
+    cursor: not-allowed;
+}
+
+a:not([href]):not([tabindex]):hover, a:not([href]):not([tabindex]):focus{
+    color: white;
+}
+
+@media only screen and (max-width:600px){
+    .fm-control-sbmt{
+        width: 100%;
+    }
+}
+
+.form-group{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card form label+.form-control {
+    margin-bottom: 0px;
+}
+
+.qr-img{
+    max-width: 20rem;
+}
+
+.pastecode{
+    justify-content: center;
+}
+
+input.form-control.copyPasta{
+    cursor: copy;
+}
+
+.clipboard{
+    margin-left: 5px;
+    color: #191b43!important;
+}

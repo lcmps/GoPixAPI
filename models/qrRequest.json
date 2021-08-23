@@ -1,0 +1,10 @@
+{
+    "name": "Lucas Campos",
+    "amount": 0.1,
+    "city": "Sao Paulo",
+    "description": "Hi!",
+    "transactionId": "00001",
+    "pixKey": "lucas1498campos@gmail.com",
+    "foregroundColor": "#000000",
+    "backgroundColor": "#ffffff"
+}

@@ -1,0 +1,65 @@
+<div id="qrcode" class="content">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 mx-auto">
+      <div class="card">
+        <div class="card-header">
+          <div class="row">
+            <div class="col-sm-6 text-left">
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <form id="clg-form">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input required class="form-control fm-control-sbmt" id="name" name="name" placeholder="Eva Lu"
+                type="text">
+            </div>
+            <div class="form-group">
+              <label for="amount">Amount</label>
+              <input required class="form-control fm-control-sbmt" id="amount" name="amount" placeholder="1.75"
+                type="text" value="0">
+            </div>
+            <div class="form-group">
+              <label for="City">City</label>
+              <input required class="form-control fm-control-sbmt" id="city" name="city" placeholder="São Paulo"
+                type="text">
+            </div>
+            <div class="form-group">
+              <label for="description">Description</label>
+              <input required class="form-control fm-control-sbmt" id="description" name="description"
+                placeholder="description" type="text">
+            </div>
+            <div class="form-group">
+              <label for="pixKey">Pix Key</label>
+              <input required class=" form-control fm-control-sbmt" id="pixKey" name="pixKey" placeholder="Pix Key"
+                type="text">
+            </div>
+            <div class="form-group">
+              <label for="foregroundColor">QR Data Color</label>
+              <input required class="form-control fm-control-sbmt" id="foregroundColor" name="foregroundColor"
+                placeholder="#000000" type="text" data-wheelcolorpicker value="000000">
+            </div>
+            <div class="form-group">
+              <label for="backgroundColor">QR Background Color</label>
+              <input required class="form-control fm-control-sbmt" id="backgroundColor" name="backgroundColor"
+                placeholder="#ffffff" type="text" data-wheelcolorpicker value="ffffff">
+            </div>
+            <!-- <input required class="form-control fm-control-sbmt" id="transactionID" name="transactionID" hidden -->
+            <!-- type="text"> -->
+            <div style="text-align: center;">
+              <button id="sbmt" class="btn btn-primary" type="submit">Generate QRCode!</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+</div>
+</div>
+<script src="assets/js/main.js"></script>
