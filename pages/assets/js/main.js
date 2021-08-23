@@ -3,6 +3,14 @@ btn_sbmt.addEventListener('click', function (e) {
     e.preventDefault()
     btn_sbmt.setAttribute('disabled', true)
 
+    var valid = isValid()
+    if(valid != undefined){
+        var inv = document.querySelector('#' + valid);
+        inv.style.borderColor = 'red'
+        alert(valid + ' is a mandatory field')
+        return
+    }
+
     var payload = {
         name: document.querySelector('#name').value,
         amount: parseFloat(document.querySelector('#amount').value),
@@ -21,10 +29,10 @@ btn_sbmt.addEventListener('click', function (e) {
                 var data = JSON.parse(this.responseText)
                 createImgHolder();
                 document.querySelector('.img-content img').src = appUrl + data.path
-                document.querySelector('#dl-img').href= appUrl + data.path
+                document.querySelector('#dl-img').href = appUrl + data.path
                 btn_sbmt.removeAttribute('disabled')
             }
-            else{
+            else {
                 console.log(this.responseText)
                 window.alert(this.responseText)
                 btn_sbmt.removeAttribute('disabled')

@@ -59,6 +59,11 @@ func serveQRCode() gin.HandlerFunc {
 		var incReq models.APIRequestQRCode
 
 		if err := ctx.ShouldBindJSON(&incReq); err == nil {
+
+			incReq.Name, _ = normalizeInput(incReq.Name)
+			incReq.City, _ = normalizeInput(incReq.City)
+			incReq.Description, _ = normalizeInput(incReq.Description)
+
 			paste, err := GeneratePaste(
 				incReq.Amount,
 				incReq.Name,
@@ -97,6 +102,11 @@ func servePaste() gin.HandlerFunc {
 		var incReq models.APIRequestQRCode
 
 		if err := ctx.ShouldBindJSON(&incReq); err == nil {
+
+			incReq.Name, _ = normalizeInput(incReq.Name)
+			incReq.City, _ = normalizeInput(incReq.City)
+			incReq.Description, _ = normalizeInput(incReq.Description)
+
 			paste, err := GeneratePaste(
 				incReq.Amount,
 				incReq.Name,
@@ -124,6 +134,11 @@ func serveQRLink() gin.HandlerFunc {
 		var incReq models.APIRequestQRCode
 
 		if err := ctx.ShouldBindJSON(&incReq); err == nil {
+
+			incReq.Name, _ = normalizeInput(incReq.Name)
+			incReq.City, _ = normalizeInput(incReq.City)
+			incReq.Description, _ = normalizeInput(incReq.Description)
+
 			paste, err := GeneratePaste(
 				incReq.Amount,
 				incReq.Name,

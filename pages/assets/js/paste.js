@@ -1,14 +1,21 @@
 var btn_sbmt = document.querySelector('#sbmt')
 btn_sbmt.addEventListener('click', function (e) {
     e.preventDefault()
+
+    var valid = isValid()
+    if(valid != undefined){
+        var inv = document.querySelector('#' + valid);
+        inv.style.borderColor = 'red'
+        alert(valid + ' is a mandatory field')
+        return
+    }
+
     var payload = {
         name: document.querySelector('#name').value,
         amount: parseFloat(document.querySelector('#amount').value),
         city: document.querySelector('#city').value,
         description: document.querySelector('#description').value,
         pixKey: document.querySelector('#pixKey').value,
-        foregroundColor: '#' + document.querySelector('#foregroundColor').value,
-        backgroundColor: '#' + document.querySelector('#backgroundColor').value,
     }
 
     var xhr = new XMLHttpRequest();

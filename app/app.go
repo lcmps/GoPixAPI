@@ -6,8 +6,12 @@ import (
 	"image/png"
 	"os"
 	"time"
+	"unicode"
 
 	"github.com/yeqown/go-qrcode"
+	"golang.org/x/text/runes"
+	"golang.org/x/text/transform"
+	"golang.org/x/text/unicode/norm"
 )
 
 func SaveImage(fileName string, imgData []byte) error {
@@ -57,4 +61,16 @@ func fileNameGenerator(k string) string {
 	today := t.Format("2006-01-02-T15")
 	name := fmt.Sprintf(`%s_%s`, today, k)
 	return name
+}
+
+func normalizeInput(input string) (string, error) {
+	t := transform.Chain(norm.NFD, runes.Remove(runes.In(unicode.Mn)), norm.NFC)
+	res, _, err := transform.String(t, input)
+	if err != nil {
+		fmt.Println(err.Error())
+		return input, err
+	}
+
+	fmt.Println("input normalize to " + res)
+	return res, nil
 }
