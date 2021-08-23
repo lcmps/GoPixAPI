@@ -27,6 +27,7 @@ func Host() {
 	r.POST("/paste", servePaste())
 	r.POST("/link", serveQRLink())
 
+	gin.SetMode(gin.ReleaseMode)
 	err := r.Run(":8080")
 	if err != nil {
 		fmt.Println(err.Error())
