@@ -141,12 +141,6 @@ a:not([href]):not([tabindex]):hover, a:not([href]):not([tabindex]):focus{
     color: white;
 }
 
-@media only screen and (max-width:600px){
-    .fm-control-sbmt{
-        width: 100%;
-    }
-}
-
 .form-group{
     display: flex;
     flex-direction: row;
